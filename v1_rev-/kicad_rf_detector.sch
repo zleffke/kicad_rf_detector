@@ -1,0 +1,246 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "RF Detector, V1"
+Date "2021-04-10"
+Rev "-"
+Comp "Amateur Radio"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L Device:C C1
+U 1 1 6071B69B
+P 3600 3800
+F 0 "C1" V 3348 3800 50  0000 C CNN
+F 1 "5pF" V 3439 3800 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 3638 3650 50  0001 C CNN
+F 3 "~" H 3600 3800 50  0001 C CNN
+	1    3600 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 6071C26A
+P 5500 3500
+F 0 "L1" V 5690 3500 50  0000 C CNN
+F 1 "100nH" V 5599 3500 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 5500 3500 50  0001 C CNN
+F 3 "~" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L kicad_KJ4QLP:SMS7630-005LF D1
+U 1 1 6071CE8C
+P 4000 3800
+F 0 "D1" V 4000 3950 50  0000 L CNN
+F 1 "SMS7630-005LF" H 3700 3900 50  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 4000 3450 50  0001 C CNN
+F 3 "https://www.skyworksinc.com/-/media/SkyWorks/Documents/Products/201-300/Surface_Mount_Schottky_Diodes_200041AG.pdf" H 4000 3900 50  0001 C CNN
+	1    4000 3800
+	0    1    -1   0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 607212BA
+P 3000 3800
+F 0 "J1" H 3150 3850 50  0000 C CNN
+F 1 "RF_IN_EDGE" H 3350 3750 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 3000 3800 50  0001 C CNN
+F 3 " ~" H 3000 3800 50  0001 C CNN
+	1    3000 3800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6072337B
+P 4650 3800
+F 0 "C2" H 4535 3754 50  0000 R CNN
+F 1 "100pF" H 4535 3845 50  0000 R CNN
+F 2 "digikey-footprints:0805" H 4688 3650 50  0001 C CNN
+F 3 "~" H 4650 3800 50  0001 C CNN
+	1    4650 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60723DB3
+P 5150 3800
+F 0 "C3" H 5035 3754 50  0000 R CNN
+F 1 "1000pF" H 5035 3845 50  0000 R CNN
+F 2 "digikey-footprints:0805" H 5188 3650 50  0001 C CNN
+F 3 "~" H 5150 3800 50  0001 C CNN
+	1    5150 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 6072A9F6
+P 3000 4000
+F 0 "#PWR01" H 3000 3750 50  0001 C CNN
+F 1 "GND" H 3005 3827 50  0000 C CNN
+F 2 "" H 3000 4000 50  0001 C CNN
+F 3 "" H 3000 4000 50  0001 C CNN
+	1    3000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 6072B183
+P 4000 4100
+F 0 "#PWR02" H 4000 3850 50  0001 C CNN
+F 1 "GND" H 4005 3927 50  0000 C CNN
+F 2 "" H 4000 4100 50  0001 C CNN
+F 3 "" H 4000 4100 50  0001 C CNN
+	1    4000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 6072B47C
+P 4650 3950
+F 0 "#PWR03" H 4650 3700 50  0001 C CNN
+F 1 "GND" H 4655 3777 50  0000 C CNN
+F 2 "" H 4650 3950 50  0001 C CNN
+F 3 "" H 4650 3950 50  0001 C CNN
+	1    4650 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 6072B74B
+P 5150 3950
+F 0 "#PWR04" H 5150 3700 50  0001 C CNN
+F 1 "GND" H 5155 3777 50  0000 C CNN
+F 2 "" H 5150 3950 50  0001 C CNN
+F 3 "" H 5150 3950 50  0001 C CNN
+	1    5150 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 607369A3
+P 5800 3800
+F 0 "C4" H 5685 3754 50  0000 R CNN
+F 1 "1000pF" H 5685 3845 50  0000 R CNN
+F 2 "digikey-footprints:0805" H 5838 3650 50  0001 C CNN
+F 3 "~" H 5800 3800 50  0001 C CNN
+	1    5800 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 6073E324
+P 5800 3950
+F 0 "#PWR05" H 5800 3700 50  0001 C CNN
+F 1 "GND" H 5805 3777 50  0000 C CNN
+F 2 "" H 5800 3950 50  0001 C CNN
+F 3 "" H 5800 3950 50  0001 C CNN
+	1    5800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_US RV1
+U 1 1 6073FAD7
+P 6500 3800
+F 0 "RV1" H 6432 3754 50  0000 R CNN
+F 1 "10k" H 6432 3845 50  0000 R CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical" H 6500 3800 50  0001 C CNN
+F 3 "~" H 6500 3800 50  0001 C CNN
+	1    6500 3800
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 60742678
+P 6500 3500
+F 0 "TP1" H 6558 3618 50  0000 L CNN
+F 1 "fixed" H 6558 3527 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6700 3500 50  0001 C CNN
+F 3 "~" H 6700 3500 50  0001 C CNN
+	1    6500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 60742C6A
+P 7000 3500
+F 0 "TP2" H 7058 3618 50  0000 L CNN
+F 1 "adjust" H 7058 3527 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7200 3500 50  0001 C CNN
+F 3 "~" H 7200 3500 50  0001 C CNN
+	1    7000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 60743281
+P 7000 4000
+F 0 "TP3" V 6954 4188 50  0000 L CNN
+F 1 "TestPoint" V 7045 4188 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7200 4000 50  0001 C CNN
+F 3 "~" H 7200 4000 50  0001 C CNN
+	1    7000 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 607435A0
+P 7000 4000
+F 0 "#PWR07" H 7000 3750 50  0001 C CNN
+F 1 "GND" H 7005 3827 50  0000 C CNN
+F 2 "" H 7000 4000 50  0001 C CNN
+F 3 "" H 7000 4000 50  0001 C CNN
+	1    7000 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3800 3900 3800
+Wire Wire Line
+	5350 3500 5150 3500
+Wire Wire Line
+	4650 3650 4650 3500
+Connection ~ 4650 3500
+Wire Wire Line
+	4650 3500 4000 3500
+Wire Wire Line
+	5150 3650 5150 3500
+Connection ~ 5150 3500
+Wire Wire Line
+	5150 3500 4650 3500
+Wire Wire Line
+	5650 3500 5800 3500
+Wire Wire Line
+	6500 3500 6500 3650
+Connection ~ 6500 3500
+$Comp
+L power:GND #PWR06
+U 1 1 607461A5
+P 6500 3950
+F 0 "#PWR06" H 6500 3700 50  0001 C CNN
+F 1 "GND" H 6505 3777 50  0000 C CNN
+F 2 "" H 6500 3950 50  0001 C CNN
+F 3 "" H 6500 3950 50  0001 C CNN
+	1    6500 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3800 7000 3800
+Wire Wire Line
+	7000 3800 7000 3500
+Wire Wire Line
+	5800 3650 5800 3500
+Connection ~ 5800 3500
+Wire Wire Line
+	5800 3500 6500 3500
+Text Notes 4000 4500 0    50   ~ 0
+SMS7630-005LF:  Produces a Positive output voltage\nSMS7630-006LF:  Produces a Negative output voltage
+Wire Wire Line
+	3200 3800 3450 3800
+$EndSCHEMATC
